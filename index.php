@@ -63,9 +63,9 @@
                 </ul>
 
             <div class="slider-tagline-switcher">
-                <span class="switch-btn-1">слайд-1</span>
-                <span class="switch-btn-2">слайд-2</span>
-                <span class="switch-btn-3">слайд-3</span>
+                <button type="button" class="switch-btn-1">слайд-1</button>
+                <button type="button" class="switch-btn-2">слайд-2</button>
+                <button type="button" class="switch-btn-3">слайд-3</button>
             </div>          
         </section>
 
@@ -136,7 +136,7 @@
                     </p>
                 </p>
 
-            <a class="button">Напишите нам</a>    
+            <button type="button">Напишите нам</button>    
             </div>
         </div>
 
