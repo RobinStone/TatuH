@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="main.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TATU-H</title>
 </head>
 <body>
 
-    <heared class="mine-header">
+    <header class="mine-header">
         <nav class="mine-navigation">
             <a class="mine-logo-pic">
                <img src="img/logo.jpg" alt="логотип компании">
