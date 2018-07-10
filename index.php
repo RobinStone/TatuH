@@ -27,13 +27,13 @@
                 <li><a href="#">корзина</a></li>
             </ul>
         </nav>
-    </header/>
+    </header>
 
     <main class="content">
-        <h1 class="hidden">Дизайн-студия "NERD's"</h1>
+        <h1 class="visually-hidden">Дизайн-студия "NERD's"</h1>
 
         <section class="mine-slider">
-            <h2 class="hidden">Слоганы компании</h2>
+            <h2 class="visually-hidden">Слоганы компании</h2>
 
                 <ul class="slider-tagline">
                     <li class="slider-tagline-item">
@@ -70,7 +70,7 @@
         </section>
 
         <section class="info-block">
-        <h2 class="hidden">Кто мы ?</h2>
+        <h2 class="visually-hidden">Кто мы ?</h2>
 
             <div class="info-block__text">
                 <p class="header-label"><strong>Мы — маленькая, но гордая дизайн-студия из Краснодара.</strong></p>
@@ -104,7 +104,7 @@
         </section>
 
         <section class="logo">
-        <h2 class="hidden">Наши проекты</h2>
+        <h2 class="visually-hidden">Наши проекты</h2>
 
             <ul class="logo-list">
                 <li class="logo-item">
@@ -125,7 +125,7 @@
 
 <footer class="mine-footer">
         <div class="map">
-        <h2 class="hidden">Наш адрес</h2>
+        <h2 class="visually-hidden">Наш адрес</h2>
             <div class="contact-info">
                 <p class="contact-info-text">
                     <strong>NЁRDS DESIGN STUDIO</strong><br>
