@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TATU-H</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:700|Roboto+Mono" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -11,15 +12,19 @@
     <header class="page-header">
         <nav class="main-navigation">
             <a class="logo">
-               <img src="img/logo.jpg" width="200px" height="80px" alt="логотип компании">
+               <img src="img/nerds-logo.svg" width="200" height="80" alt="логотип компании">
            </a>
             <ul class="navigation-list">
                 <li><a href="studio.html">студия</a></li>
                 <li><a href="clients.html">клиенты</a></li>
                 <li><a href="shop.html">магазин</a></li>
-                <li><a href="contacts.html">контакты</a></li>
-                <li><a href="#">корзина</a></li>
-            </ul>               
+                <li><a href="contacts.html">контакты</a></li>                
+            </ul>
+            <ul>
+                <li>
+                    <a class="basket" href="#">корзина</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -29,52 +34,52 @@
             <h2 class="visually-hidden">Слоганы компании</h2>
                 <ul class="slider-list">
                     <li class="slider-item">
-                        <div class="slider-item-info">
+                        <div class="slider-item-info slide-1">
                             <h2>Долго, дорого, скрупулезно.</h2>
                             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
                             <a class="button" href="#">узнать больше</a>
-                        </div>                            
+                        </div>
                     </li>
                     <li class="slider-item">
-                        <div class="slider-item-info">
+                        <div class="slider-item-info slide-2">
                             <h2>Любим математику как никто другой.</h2>
                             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                            <a clas="button" href="#">узнать больше</a>
-                        </div>                            
+                            <a class="button" href="#">узнать больше</a>
+                        </div>
                     </li>
                     <li class="slider-item">
-                        <div class="slider-tagline-item__info">
+                        <div class="slider-item-info slide-3">
                             <h2>Только ночь, только хардкор.</h2>
                             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается..</p>
-                            <a clas="button" href="#">узнать больше</a>
-                        </div>                           
+                            <a class="button" href="#">узнать больше</a>
+                        </div>
                     </li>
                 </ul>
 
             <div class="slider-controls">
-                <button type="button" class="switch-btn-1">слайд-1</button>
-                <button type="button" class="switch-btn-2">слайд-2</button>
-                <button type="button" class="switch-btn-3">слайд-3</button>
-            </div>          
+                <button type="button" class="switch-btn active">слайд-1</button>
+                <button type="button" class="switch-btn">слайд-2</button>
+                <button type="button" class="switch-btn">слайд-3</button>
+            </div>
         </section>
 
         <section class="advantages">
-        <h2 class="visually-hidden">Наши преимущества</h2>                    
+        <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="advantages-list">
                 <li class="advantages-item red-rect">
-                    <b>веб сайты</b>       
+                    <b>веб сайты</b>
                     <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                    <a href="#">заказать</a>
+                    <a class="button red" href="#">заказать</a>
                 </li>
                 <li class="advantages-item green-rect">
-                    <b>приложения</b>       
+                    <b>приложения</b>
                     <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a href="#">заказать</a>
+                    <a class="button green" href="#">заказать</a>
                 </li>
                 <li class="advantages-item yellow-rect">
-                    <b>презентации</b>       
+                    <b>презентации</b>
                     <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-                    <a href="#">заказать</a>
+                    <a class="button yellow" href="#">заказать</a>
                 </li>
             </ul>
         </section>
@@ -123,16 +128,16 @@
 
             <ul class="logo-list">
                 <li class="logo-item">
-                    <a href="#"><img src="img/academy.jpg" width="300" height="180" alt="логотип html academy"></a>
+                    <a href="#"><img src="img/logo-1.png" width="300" height="180" alt="логотип html academy"></a>
                 </li>
                 <li class="logo-item">
-                    <a href="#"><img src="img/barbershop.jpg" width="300" height="180" alt="логотип barbershop borodinkiy"></a>
+                    <a href="#"><img src="img/logo-2.png" width="300" height="180" alt="логотип barbershop borodinkiy"></a>
                 </li>
                 <li class="logo-item">
-                    <a href="#"><img src="img/pink.jpg" width="300" height="180" alt="логотип pink"></a>
+                    <a href="#"><img src="img/logo-3.png" width="300" height="180" alt="логотип pink"></a>
                 </li>
                 <li class="logo-item">
-                    <a href="#"><img src="img/mishka.jpg" width="300" height="180" alt="логотип mishka"></a>
+                    <a href="#"><img src="img/logo-4.png" width="300" height="180" alt="логотип mishka"></a>
                 </li>
             </ul>
         </section>
@@ -140,7 +145,8 @@
 
     <footer class="page-footer">
         <div class="map">
-            <img src="img/map.png" width="1200px" height="340px" alt="мы расположены"/>
+            <img src="img/map-marker.png" width="200" height="200" alt="указатель">
+            <img src="img/map.jpg" width="1200" height="640" alt="мы расположены"/>
             <section class="contact-info">
                 <p class="contact-info-text">
                     <h3>nerds design studio</h3>
