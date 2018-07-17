@@ -12,7 +12,7 @@
         <header class="page-header">
                 <nav class="main-navigation">
                     <a class="logo">
-                       <img src="img/logo.jpg" width="200px" height="80px" alt="логотип компании">
+                       <img src="img/nerds-logo.svg" width="200" height="80" alt="логотип компании">
                    </a>
                     <ul class="navigation-list">
                         <li><a href="studio.html">студия</a></li>
@@ -49,7 +49,7 @@
                         <li class="features-item"><input type="checkbox" name="basket" id="basket" value="basket"><label for="basket">корзина</label></li>
                     </ul>
                 </fieldset>
-                <button type="submit">Показать</button>
+                <button class="button" type="submit">Показать</button>
             </form>
 
         <section class="catalog">
@@ -69,72 +69,60 @@
 
             <ul class="template-list">
                 <li class="template-item">
-                    <a class="preview-site" href="#">
-                        <img src="img/sedona.jpg" width="350" height="580" alt="макет сайта sedona"/>
+                        <img src="img/img-sedona.jpg" width="350" height="580" alt="макет сайта sedona"/>
                         <div class="hiden">
                             <b>sedona</b>
                             <p>Информационный сайт<br>для туристов</p>
                             <a class="button" href="#">9 900 руб.</a>
                         </div>
-                    </a>
                 </li>
                 <li class="template-item">
-                        <a class="preview-site" href="#">
-                            <img src="img/pink.jpg" width="350" height="580" alt="макет сайта pink app"/>
+                            <img src="img/img-pink.jpg" width="350" height="580" alt="макет сайта pink app"/>
                             <div class="hiden">
                                 <b>pink app</b>
                                 Продуктовый лендинг<br>приложения для iOS и Android
                                 <a class="button" href="#">9 900 руб.</a>
                             </div>
-                        </a>
                 </li>
                 <li class="template-item">
-                        <a class="preview-site" href="#">
-                            <img src="img/barbershop.jpg" width="350" height="580" alt="макет сайта barbershop"/>
+                            <img src="img/img-barbershop.jpg" width="350" height="580" alt="макет сайта barbershop"/>
                             <div class="hiden">
                                 <b>barbershop</b>
                                 Сайт салоны красоты.<br>Для мужчин, да.
                                 <a class="button" href="#">9 900 руб.</a>
                             </div>
-                        </a>
                 </li>
                 <li class="template-item">
-                        <a class="preview-site" href="#">
-                            <img src="img/mishka.jpg" width="350" height="580" alt="макет сайта mishka"/>
+                            <img src="img/img-mishka.jpg" width="350" height="580" alt="макет сайта mishka"/>
                             <div class="hiden">
                                 <b>mishka</b>
                                 Интернет-магазин<br>вязаных игрушек
                                 <a class="button" href="#">9 900 руб.</a>
                             </div>
-                        </a>
                 </li>
                 <li class="template-item">
-                        <a class="preview-site" href="#">
-                            <img src="img/a_plus.jpg" width="350" height="580" alt="макет сайта a plus"/>
+                            <img src="img/img-aplus.jpg" width="350" height="580" alt="макет сайта a plus"/>
                             <div class="hiden">
                                 <b>a plus</b>
                                 Лендинг курсов повышения<br>квалификации
                                 <a class="button" href="#">9 900 руб.</a>
                             </div>
-                        </a>
                 </li>
                 <li class="template-item">
-                        <a class="preview-site" href="#">
-                            <img src="img/kvast.jpg" width="350" height="580" alt="макет сайта кваст"/>
+                            <img src="img/img-kvast.jpg" width="350" height="580" alt="макет сайта кваст"/>
                             <div class="hiden">
                                 <b>кваст</b>
                                 Промо-сайт производителя<br>крафтового кваса
                                 <a class="button" href="#">9 900 руб.</a>
                             </div>
-                        </a>
                 </li>
                 </ul>
 
                 <ul class="breadcrumbs">
-                    <li class="breadcrumbs-item active"><a>1</a></li>
+                    <li class="breadcrumbs-item enabled"><a>1</a></li>
                     <li class="breadcrumbs-item"><a href="#">2</a></li>
                     <li class="breadcrumbs-item"><a href="#">3</a></li>
-                    <li class="breadcrumbs-item"><a href="#">следущая</a></li>
+                    <li class="breadcrumbs-item next"><a href="#">следущая</a></li>
                 </ul>
             </section>
         </div>
@@ -143,7 +131,8 @@
 
     <footer class="page-footer">
             <div class="map">
-                <img src="img/map.png" width="1200px" height="340px" alt="мы расположены"/>
+                <img src="img/map-marker.png" width="200" height="200" alt="указатель">
+                <img src="img/map.jpg" width="1200" height="640" alt="мы расположены"/>
                 <section class="contact-info">
                     <p class="contact-info-text">
                         <h3>nerds design studio</h3>
@@ -159,7 +148,7 @@
             </div>
     
             <section class="social">
-                    <h3 class="visually-hidden">социальные сети</h3>
+                <h3 class="visually-hidden">социальные сети</h3>
                     <ul class="social-list">
                         <li class="social-item"><a href="#">в контакте</a></li>
                         <li class="social-item"><a href="#">facebook</a></li>
@@ -170,9 +159,9 @@
                         <p>Скидка 10% для друзей из социальных сетей.</p>
                     </div>
             </section>
-    </footer>
-
-    <div class="popap">
+        </footer>
+    
+        <div class="popap">
             <h2>напишите нам</h2>
             <button type="button">закрыть</button>
             <form action="mailForm.php" method="POST" name="userMailForm">
@@ -186,11 +175,15 @@
                 </label>
                 <label>
                         Текст письма:<br>
-                        <textarea name="userText" placeholder="Ваше письмо"></textarea><br>
+                        <textarea required name="userText">
+    
+                        </textarea><br>
                 </label>
-                <button type="submit">Отправить</button>
+    
+                <button class="button" type="submit">Отправить</button>
             </form>
         </div>
-
-</body>
-</html>
+    
+    
+    </body>
+    </html>

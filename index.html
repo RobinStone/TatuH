@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>TATU-H</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:700|Roboto+Mono" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
+
 <body class="page">
 
+    <div class="grow-rect"></div>
     <header class="page-header">
         <nav class="main-navigation">
             <a class="logo">
-               <img src="img/nerds-logo.svg" width="200" height="80" alt="логотип компании">
-           </a>
+                <img src="img/nerds-logo.svg" width="200" height="80" alt="логотип компании">
+            </a>
             <ul class="navigation-list">
-                <li><a href="studio.html">студия</a></li>
+                <li class="current"><a href="studio.html">студия</a></li>
                 <li><a href="clients.html">клиенты</a></li>
                 <li><a href="shop.html">магазин</a></li>
-                <li><a href="contacts.html">контакты</a></li>                
+                <li><a href="contacts.html">контакты</a></li>
             </ul>
-            <ul>
+            <ul class="basket">
                 <li>
-                    <a class="basket" href="#">корзина</a>
+                    <a href="#">корзина</a>
                 </li>
             </ul>
         </nav>
@@ -32,39 +37,39 @@
 
         <section class="slider">
             <h2 class="visually-hidden">Слоганы компании</h2>
-                <ul class="slider-list">
-                    <li class="slider-item">
-                        <div class="slider-item-info slide-1">
-                            <h2>Долго, дорого, скрупулезно.</h2>
-                            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                            <a class="button" href="#">узнать больше</a>
-                        </div>
-                    </li>
-                    <li class="slider-item">
-                        <div class="slider-item-info slide-2">
-                            <h2>Любим математику как никто другой.</h2>
-                            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                            <a class="button" href="#">узнать больше</a>
-                        </div>
-                    </li>
-                    <li class="slider-item">
-                        <div class="slider-item-info slide-3">
-                            <h2>Только ночь, только хардкор.</h2>
-                            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается..</p>
-                            <a class="button" href="#">узнать больше</a>
-                        </div>
-                    </li>
-                </ul>
+            <ul class="slider-list">
+                <li class="slider-item slide-1">
+                    <div class="slider-item-info">
+                        <h2>Долго, дорого, скрупулезно.</h2>
+                        <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                        <a class="button" href="#">узнать больше</a>
+                    </div>
+                </li>
+                <li class="slider-item hidden slide-2">
+                    <div class="slider-item-info">
+                        <h2>Любим математику как никто другой.</h2>
+                        <p>Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p>
+                        <a class="button" href="#">узнать больше</a>
+                    </div>
+                </li>
+                <li class="slider-item hidden slide-3">
+                    <div class="slider-item-info">
+                        <h2>Только ночь, только хардкор.</h2>
+                        <p>Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается..</p>
+                        <a class="button" href="#">узнать больше</a>
+                    </div>
+                </li>
+            </ul>
 
             <div class="slider-controls">
-                <button type="button" class="switch-btn active">слайд-1</button>
-                <button type="button" class="switch-btn">слайд-2</button>
-                <button type="button" class="switch-btn">слайд-3</button>
+                <button type="button" id="slide-1" class="switch-btn active">слайд-1</button>
+                <button type="button" id="slide-2" class="switch-btn">слайд-2</button>
+                <button type="button" id="slide-3" class="switch-btn">слайд-3</button>
             </div>
         </section>
 
         <section class="advantages">
-        <h2 class="visually-hidden">Наши преимущества</h2>
+            <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="advantages-list">
                 <li class="advantages-item red-rect">
                     <b>веб сайты</b>
@@ -84,34 +89,34 @@
             </ul>
         </section>
 
-        <section class="info-block">
-        <h2 class="visually-hidden">Кто мы ?</h2>
+        <section class="info-block borders">
+            <h2 class="visually-hidden">Кто мы ?</h2>
 
             <div class="info-block-text">
                 <b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
-                <p class="little-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
                 <h3>Выполняем заказы на разработку:</h3>
                 <ul class="list-services">
                     <li class="list-item">
-                            Веб-сайтов любой сложности
+                        Веб-сайтов любой сложности
                     </li>
                     <li class="list-item">
-                            Мобильных приложений для iOS и Android
+                        Мобильных приложений для iOS и Android
                     </li>
                     <li class="list-item">
-                            Слайдшоу и видео для корпоративных презентаций
+                        Слайдшоу и видео для корпоративных презентаций
                     </li>
                 </ul>
             </div>
 
             <div class="statistic-card">
-            <h3>с 2004 года Любим точность во всем:</h3>
+                <h3>с 2004 года Любим точность во всем:</h3>
                 <ul class="statistic-list">
                     <li class="statistic-item">
                         <span>146<sup>%</sup></span>
                         <p>Уровень самоотдачи</p>
                     </li>
-                    <li class="statisti-item">
+                    <li class="statistic-item">
                         <span>100<sup>%</sup></span>
                         <p>Соблюдение сроков</p>
                     </li>
@@ -124,7 +129,7 @@
         </section>
 
         <section class="partners">
-        <h2 class="visually-hidden">Наши партнёры</h2>
+            <h2 class="visually-hidden">Наши партнёры</h2>
 
             <ul class="logo-list">
                 <li class="logo-item">
@@ -146,32 +151,31 @@
     <footer class="page-footer">
         <div class="map">
             <img src="img/map-marker.png" width="200" height="200" alt="указатель">
-            <img src="img/map.jpg" width="1200" height="640" alt="мы расположены"/>
+            <img src="img/map.jpg" width="1200" height="640" alt="мы расположены" />
             <section class="contact-info">
                 <p class="contact-info-text">
                     <h3>nerds design studio</h3>
                     <p>
-                        191186, Санкт-Петербург,<br>
-                        ул. Б. Конюшенная, д. 19/8<br>
-                        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+                        191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8<br>
+                        <a class="tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                     </p>
                 </p>
 
-            <a href="form.html" class="button">Напишите нам</a>
+                <a href="form.html" class="button">Напишите нам</a>
             </section>
         </div>
 
         <section class="social">
             <h3 class="visually-hidden">социальные сети</h3>
-                <ul class="social-list">
-                    <li class="social-item"><a href="#">в контакте</a></li>
-                    <li class="social-item"><a href="#">facebook</a></li>
-                    <li class="social-item"><a href="#">instagram</a></li>
-                </ul>
-                <div class="friends">
-                    <p>Давайте дружить, это выгодно!</p>
-                    <p>Скидка 10% для друзей из социальных сетей.</p>
-                </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#">в контакте</a></li>
+                <li class="social-item"><a href="#">facebook</a></li>
+                <li class="social-item"><a href="#">instagram</a></li>
+            </ul>
+            <div class="friends">
+                <p>Давайте дружить, это выгодно!</p>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
         </section>
     </footer>
 
@@ -194,10 +198,12 @@
                     </textarea><br>
             </label>
 
-            <button type="submit">Отправить</button>
+            <button class="button" type="submit">Отправить</button>
         </form>
     </div>
 
+    <script src="js/nerds_js.js"></script>
 
 </body>
+
 </html>
