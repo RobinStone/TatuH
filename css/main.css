@@ -10,6 +10,8 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -49,6 +51,7 @@ ul {
     border-radius: 5px;
     text-align: center;
     color: white;
+    cursor: pointer;    
 }
 
 .button:hover,
@@ -143,6 +146,7 @@ ul {
 }
 
 .slider-item-info p {
+    padding-bottom: 40px;
     line-height: 24px;
 }
 
@@ -170,10 +174,16 @@ ul {
     margin-right: 202px;
     width: 160px;
     height: 65px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.slider-item-info p {
-    padding-bottom: 22px;
+.logo img:hover {
+    opacity: 0.8;
+}
+
+.logo img:active {
+    opacity: 0.3;
 }
 
 .slider-item-info {
@@ -205,31 +215,22 @@ ul {
 }
 
 .advantages {
-    margin-bottom: 121px;
-    position: relative;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    margin-bottom: 40px;
 }
 
-.advantages::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: url('../img/line.png') no-repeat center;
-    left: 0;
-    bottom: -85px;
-}
 
 .advantages-list {
     display: flex;
-    justify-content: space-between;
-    padding-top: 80px;
 }
 
 .advantages-list b {
-    padding-top: 173px;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: bold;
+    padding-bottom: 16px;
 }
 
 .advantages-list p {
@@ -242,7 +243,11 @@ ul {
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-right: 60px;
+    padding-top: 173px;
+}
+
+.advantages-item:not(:last-child){
+    margin-right: 100px;
 }
 
 .advantages-item a {
@@ -292,17 +297,8 @@ ul {
 .info-block {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 49px;
-}
-
-.info-block::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: url('../img/line.png') no-repeat center;
-    left: 0;
-    bottom: -55px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
 }
 
 .info-block-text {
@@ -333,35 +329,35 @@ ul {
 .list-services {
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
 }
 
 .list-item {
     position: relative;
-    padding-left: 30px;
+    padding-left: 36px;
     margin-bottom: 30px;
 }
 
 .list-item::before {
     content: '';
+    display: block;
+    left: 0;
+    top: 50%;
+    width: 26px;
+    height: 1px;
     position: absolute;
-    border-bottom: 1px solid black;
-    width: 25px;
-    height: 6px;
-    left: -5px;
-    bottom: 10px;
+    background-color: #000;
 }
 
 .statistic-card {
     width: 360px;
     background: url('../img/nerds-illustration.jpg') no-repeat top;
+    padding-top: 247px
 }
 
 .statistic-card h3 {
     font-size: 16px;
     text-transform: uppercase;
-    padding-top: 232px;
-    padding-bottom: 46px;
+    padding-bottom: 42px;
     text-align: center;
 }
 
@@ -377,23 +373,13 @@ ul {
 .statistic-item span {
     display: block;
     font-size: 45px;
-    line-height: 10.06px;
     font-weight: bold;
-    margin-bottom: 36px;
+    margin-bottom: 15px;
 }
 
 .partners {
-    margin-bottom: 80px;
-}
-
-.partners::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: url('../img/line.png') no-repeat center;
-    left: 0;
-    bottom: -4px;
+    margin-bottom: 75px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
 }
 
 .logo-list {
@@ -408,7 +394,7 @@ ul {
 .logo-item:not(:last-child)::after {
     content: '';
     position: absolute;
-    right: 5px;
+    right: -7%;
     top: 0;
     width: 10px;
     height: 100%;
@@ -445,7 +431,7 @@ ul {
 .contact-info {
     position: absolute;
     background-color: white;
-    padding: 35px 50px;
+    padding: 54px 50px;
     left: 50%;
     transform: translateX(-580px);
     top: 55px;
@@ -454,7 +440,7 @@ ul {
 
 .contact-info h3 {
     text-transform: uppercase;
-    padding-bottom: 10px;
+    padding-bottom: 28px;
 }
 
 .tel {
@@ -471,12 +457,13 @@ ul {
 }
 
 .contact-info p {
-    padding-bottom: 21px;
+    padding-bottom: 36px;
     color: #666666;
 }
 
 #popapVisually {
     width: 220px;
+    margin-top: auto;
 }
 
 .social {
@@ -678,32 +665,43 @@ label textarea {
 
 .wraper {
     display: flex;
+    justify-content: space-between;
 }
 
 .user-select {
-    width: 270px;
-    margin-right: 130px;
+    width: 260px;
 }
 
-.cost {
-    width: 97%;
+.catalog {
+    width: 760px;
 }
 
 .catalog-sort,
-.sorted-type,
+.sorted-type {
+    margin-left: auto;
+    display: flex;
+}
+
 .sorted-arrow {
     display: flex;
+    padding-left: 20px;
 }
 
 .catalog-sort span,
 .cost span,
-.visually-hidden span,
-fieldset span {
+.visually-hidden span {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 270px;
 }
+
+.user-select legend {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
 
 .cost span {
     display: block;
@@ -721,19 +719,25 @@ fieldset span {
     margin-bottom: 54px;
 }
 
+.sorted-item a {
+    display: block;
+    transition: 0.3s;
+    opacity: 0.3;
+}
+
 .sorted-item {
     font-size: 14px;
-    opacity: 0.3;
     margin-right: 27px;
     transition: 0.2s;
 }
 
 .sorted-item a:focus {
     outline: none;
-    text-decoration: underline;
+    opacity: 0.8;
+    transform: scale(1.2);
 }
 
-.sorted-item:hover {
+.sorted-item a:hover {
     opacity: 1;
 }
 
@@ -741,7 +745,23 @@ fieldset span {
     opacity: 0.1;
 }
 
-.arrow-up {
+.arrow-item {
+    cursor: pointer;
+}
+
+.arrow-item a:hover {
+    opacity: 1;
+}
+
+.arrow-item:active {
+    opacity: 0.2;
+}
+
+.arrow-item:focus {
+    display: none;
+}
+
+.arrow-up a {
     display: block;
     width: 20px;
     height: 20px;
@@ -749,7 +769,7 @@ fieldset span {
     opacity: 0.3;
 }
 
-.arrow-down {
+.arrow-down a {
     display: block;
     width: 20px;
     height: 20px;
@@ -761,25 +781,36 @@ fieldset span {
     opacity: 0.8;
 }
 
+.enabled a {
+    opacity: 1;
+}
+
+.arrow-item a:focus {
+    transform: scale(1.3);
+    outline: none;
+}
+
+.arrow-item a:hover {
+    opacity: 1;
+}
+
 .template-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 23px;
 }
 
 .template-item {
     width: 360px;
-    margin-bottom: 20px;
-}
-
-.template-list .template-item:nth-of-type(odd) {
-    margin-right: 40px;
-}
-
-.template-item {
+    height: 610px;
+    margin-bottom: 40px;
     position: relative;
     padding-top: 40px;
     outline: none;
+}
+
+.template-list .template-item:nth-of-type(odd){
+    margin-right: 40px;
 }
 
 .template-item::before {
@@ -790,8 +821,10 @@ fieldset span {
     height: 40px;
     top: 0;
     background: url('../img/browser.svg') no-repeat center;
+    transition: 0.3s;
 }
 
+.template-item:hover::before,
 .template-item:focus::before {
     opacity: 1;
 }
@@ -799,7 +832,7 @@ fieldset span {
 .template-item:hover .hiden,
 .template-item:focus .hiden,
 .template-item .button:hover .hiden {
-    height: 235px;
+    height: 230px;
     opacity: 1;
 }
 
@@ -810,17 +843,14 @@ fieldset span {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100px;
     height: 0;
     bottom: 0;
-    /*
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-*/
     background-color: #eee;
     z-index: 2;
     opacity: 0;
     transition: 0.4s;
+    padding-top: 8px;
+    padding-bottom: 37px;
 }
 
 .hiden b {
@@ -828,7 +858,7 @@ fieldset span {
     font-size: 18px;
     font-weight: bold;
     padding-top: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
 }
 
 .hiden p {
@@ -837,7 +867,11 @@ fieldset span {
     font-size: 16px;
     width: 240px;
     color: #666;
-    margin-bottom: 40px;
+}
+
+.hiden a {
+    margin-top: auto;
+    width: 200px;
 }
 
 .next-pages-list {
@@ -845,7 +879,7 @@ fieldset span {
     margin-bottom: 60px;
 }
 
-.next-pages-item {
+.next-pages-item a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -856,24 +890,33 @@ fieldset span {
     border-radius: 5px;
     margin-right: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.next-pages-item:hover {
+.next-pages-item a {
+    outline: none;
+}
+
+.next-pages-item a:hover {
     background-color: #dfdfdf;
 }
 
-.next-pages-item:active {
+.next-pages-item a:focus {
+        background-color: #dfdfdf;
+}
+
+.next-pages-item a:active {
     background-color: #d5d5d5;
-    border-top: 1px solid #dfdfdf;
+    border-top: 4px solid #dfdfdf;
     color: #a9a9a9;
 }
 
-.next {
+.next a {
     width: 260px;
 }
 
-.page-current {
-    border: 2px solid #dbdbdb;
+.page-current a {
+    border: 3px solid #dbdbdb;
     background-color: #fff;
 }
 
@@ -882,33 +925,43 @@ fieldset span {
     padding: 0;
 }
 
-.wraper fieldset:nth-child(1) {
+.user-select fieldset:nth-child(1) {
     margin-bottom: 60px;
+}
+
+.user-select fieldset:nth-child(2) {
+    margin-bottom: 40px;
+}
+
+.grids-list {
+    padding-top: 14px;
 }
 
 .grids-item label {
     display: block;
     position: relative;
     padding-left: 35px;
-    padding-top: 22px;
-}
-
-.grids-list .grids-item:last-child {
-    margin-bottom: 53px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: #283136;
+    cursor: pointer;
 }
 
 .grids-item label::after {
     content: '';
     position: absolute;
-    left: -1px;
-    bottom: -2px;
+    left: 0;
+    bottom: 10px;
     width: 25px;
     height: 25px;
+    color: #283136;
 }
 
 .grids-item input[type="radio"]~label::after {
     background: url(../img/radio-off.png) no-repeat center;
     background-size: 100%;
+    opacity: 0.4;
+    transition: 0.3s;
 }
 
 .grids-item input[type="radio"]:checked~label::after {
@@ -916,18 +969,31 @@ fieldset span {
     background-size: 100%;
 }
 
-.grids-item input[type="radio"]:focus~label {
-    font-weight: bold;
+.grids-item input[type="radio"]:focus ~ label::after,
+.grids-item input[type="radio"]:hover ~ label::after {
+    opacity: 1;
+}
+
+.grids-item input[type="radio"]:focus~label,
+.grids-item input[type="radio"]:hover~label {
+    color: #000;
 }
 
 .features-item label {
     display: block;
     position: relative;
     padding-left: 35px;
-    padding-top: 22px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: #283136;
+    cursor: pointer;
 }
 
-.features-list .features-item:last-child {
+.features-item:first-child {
+    margin-top: 10px;
+}
+
+.features-item:last-child {
     margin-bottom: 47px;
 }
 
@@ -935,23 +1001,31 @@ fieldset span {
     content: '';
     position: absolute;
     left: 0px;
-    bottom: 0px;
-    width: 25px;
-    height: 25px;
+    bottom: 9px;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
 }
 
-.features-list input[type="checkbox"]~label::after {
+.features-list input[type="checkbox"] ~ label::after {
     background: url(../img/checkbox-off.png) no-repeat center;
     background-size: 100%;
+    opacity: 0.4;
 }
 
-.features-list input[type="checkbox"]:checked~label::after {
+.features-list input[type="checkbox"]:checked ~ label::after {
     background: url(../img/checkbox-on.png) no-repeat center;
     background-size: 100%;
 }
 
-.features-list input[type="checkbox"]:focus~label {
-    font-weight: bold;
+.features-list input[type="checkbox"]:focus ~ label,
+.features-list input[type="checkbox"]:hover ~ label {
+    color: #000;
+}
+
+.features-list input[type="checkbox"]:focus ~ label::after,
+.features-list input[type="checkbox"]:hover ~ label::after {
+    opacity: 1;
 }
 
 .user-select .button {
@@ -964,7 +1038,13 @@ fieldset span {
     height: 80px;
     background-color: #eee;
     border-radius: 5px;
+    margin-top: 54px;
     margin-bottom: 16px;
+}
+
+.min-price input,
+.max-price input{
+    margin-left: 9px;
 }
 
 .grad-line {
@@ -978,21 +1058,24 @@ fieldset span {
 
 .toggle-min,
 .toggle-max {
+    box-sizing: content-box;
     position: absolute;
-    top: -14px;
-    width: 25px;
-    height: 25px;
+    top: -12px;
+    width: 5px;
+    height: 5px;
+    border: 10px solid white;
     border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    background-color: #b9b7b7;
+    box-shadow: 0 2px 1px 0 rgba(56, 56, 56, 0.28);
+    cursor: pointer;
 }
 
 .toggle-min:hover,
 .toggle-min:focus,
 .toggle-max:hover,
 .toggle-max:focus {
-    background-color: #ceffcc;
-    box-shadow: 0 2px 3px 2px #cfcfcf;
+    background-color: #5a5a5a;
+    box-shadow: 0 2px 3px 2px rgba(93, 93, 93, 0.36);
     outline: none;
 }
 
@@ -1039,3 +1122,4 @@ fieldset span {
     border: none;
     outline: none;
 }
+

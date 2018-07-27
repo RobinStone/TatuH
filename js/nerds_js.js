@@ -44,7 +44,7 @@ $('.arrow-item').on('click', function(){
 // --------------- progress BAR --------------------
 
 $(toggleMin).on('mousedown', function(e){
-    if (!pressedMin) {
+    if (pressedMin === false) {
         xBegin = e.pageX;
         buff = parseInt($('.toggle-min').css('left'));
     }
