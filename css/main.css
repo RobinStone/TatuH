@@ -428,6 +428,11 @@ ul {
     margin-bottom: 70px;
 }
 
+.interactive-map {
+    height: 415px;
+    width: 100%;
+}
+
 .contact-info {
     position: absolute;
     background-color: white;
